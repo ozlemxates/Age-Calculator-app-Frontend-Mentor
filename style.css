@@ -1,3 +1,33 @@
+@font-face {
+    font-family:poppins-bold;
+    src: url(assets/fonts/Poppins-Bold.ttf);  
+}
+
+@font-face {
+    font-family:poppins-bold-italic;
+    src: url(assets/fonts/Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family:poppins-extra-bold;
+    src: url(assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family:poppins-regular;
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family:poppins-italic;
+    src: url(assets/fonts/Poppins-Italic.ttf);
+}
+
+@font-face {
+    font-family:poppins-extra-bold-italic;
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,11 +52,12 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: var(--secondaryBg);
+    gap: 4rem;
 }
 
 main {
-    width: 35rem;
-    height: 26rem;
+    width: 39rem;
+    height: 29rem;
     background-color: var(--mainBg);
     border-radius: 1rem 1rem 8rem 1rem ;
 }
@@ -38,8 +69,16 @@ header {
     flex-direction: row;
 }
 
-h3 {
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+h5 {
     color:var(--Smokey-grey);
+    font-family:poppins-regular;
+    text-transform: uppercase;
 }
 
 input {
@@ -50,10 +89,13 @@ input {
     outline: 1px solid var(--Light-grey);
     text-align: left;
     padding: 1rem;
+    font-size: 1.2rem;
+    font-family: poppins-bold;
 }
 
 input::placeholder {
     color: var(--Smokey-grey);
+    
   }
 
 hr {
@@ -84,6 +126,7 @@ img {
     flex-direction: column;
     font-size: 4rem;
     padding: 1rem 2rem;
+    font-family:poppins-extra-bold-italic;
 }
 
 li {
@@ -91,7 +134,7 @@ li {
 }
 
 span {
-    color:var(--Smokey-grey)
+    color:var(--txtContent)
 }
 
 .attribution { 
