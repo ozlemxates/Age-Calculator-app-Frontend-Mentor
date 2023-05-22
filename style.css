@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    --txtContent: hsl(259, 100%, 65%);
+    --invalidTxt: hsl(0, 100%, 67%);
+    --mainBg: hsl(0, 0%, 100%);
+    --secondaryBg: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondaryBg);
+}
+
+main {
+    width: 35rem;
+    height: 26rem;
+    background-color: var(--mainBg);
+    border-radius: 1rem 1rem 8rem 1rem ;
+}
+
+header {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    flex-direction: row;
+}
+
+h3 {
+    color:var(--Smokey-grey);
+}
+
+input {
+    width: 6rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border:none;
+    outline: 1px solid var(--Light-grey);
+    text-align: left;
+    padding: 1rem;
+}
+
+input::placeholder {
+    color: var(--Smokey-grey);
+  }
+
+hr {
+    margin: 0 2rem;
+    border-color: var(--Light-grey);
+}
+
+.icon {
+    display: flex;
+    justify-content: end;
+    margin-right: 2rem;
+    
+}
+
+img {
+    background-color: var(--txtContent);
+    position: absolute;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    margin-top: -2rem;
+}
+
+/* ***************content******************** */
+.content {
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    padding: 1rem 2rem;
+}
+
+li {
+    list-style: none;
+}
+
+span {
+    color:var(--Smokey-grey)
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 20rem;
+    }
+
+    header { 
+        padding: 1rem 2rem 2rem 2rem 2rem;
+    }
+
+    input {
+        width: 4rem;
+    }
+  }
