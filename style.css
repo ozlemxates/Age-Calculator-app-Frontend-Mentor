@@ -148,14 +148,25 @@ span {
 
 @media screen and (max-width: 768px) {
     main {
-        width: 20rem;
+        width: 22rem;
+        height: 32rem;
     }
 
     header { 
-        padding: 1rem 2rem 2rem 2rem 2rem;
+        padding: 1rem 2rem 4rem 2rem;
+    }
+
+    .icon {
+        justify-content: center;
     }
 
     input {
-        width: 4rem;
+        width: 5rem;
+        font-size: 1rem;
+    }
+
+    .content {
+        padding:4rem 2rem 4rem 2rem ;
+        font-size: 3.2rem;
     }
   }
