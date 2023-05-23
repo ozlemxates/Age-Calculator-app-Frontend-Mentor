@@ -33,20 +33,25 @@ function calculateAge() {
 
     if (birthDay < 1 || birthDay > getDaysInMonth(currentYear, birthMonth - 1)) {
         document.getElementById('errorDay').innerHTML = "Must be a valid day";
+        document.getElementById('day').style.borderColor = "red";
         return;
     } else {
         document.getElementById('errorDay').innerHTML = "";
+        document.getElementById('day').style.borderColor = "";
     }
 
     if (birthMonth < 1 || birthMonth > 12) {
         document.getElementById('errorMonth').innerHTML = "Must be a valid month";
         return;
-
+    } else {
+        document.getElementById('errorMonth').innerHTML = "";
     }
 
     if (birthYear < 1 || birthYear > currentYear) {
         document.getElementById('errorYear').innerHTML = "Must be a valid year";
         return;
+    } else {
+        document.getElementById('errorYear').innerHTML = "";
     }
 
     document.getElementById('resultYear').innerHTML = years;
