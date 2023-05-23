@@ -14,13 +14,39 @@ function calculateAge() {
 
     if (currentMonth < birthMonth || (currentMonth === birthMonth && currentDay < birthDay)) {
         years--;
-        months = (12 - birthMonth) + currentMonth;
+        months = 12 - birthMonth + currentMonth - 1;
+        if (currentDay < birthDay) {
+            months++;
+        }
     }
 
     if (currentDay < birthDay) {
-        let monthDays = new Date(currentYear, currentMonth - 1, 0).getDate();
-        days = monthDays + days;
+        let monthDays = getDaysInMonth(currentYear, currentMonth - 1);
+        days = monthDays - (birthDay - currentDay);
         months--;
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+    }
+
+    if (birthDay < 1 || birthDay > getDaysInMonth(currentYear, birthMonth - 1)) {
+        document.getElementById('errorDay').innerHTML = "Must be a valid day";
+        return;
+    } else {
+        document.getElementById('errorDay').innerHTML = "";
+    }
+
+    if (birthMonth < 1 || birthMonth > 12) {
+        document.getElementById('errorMonth').innerHTML = "Must be a valid month";
+        return;
+
+    }
+
+    if (birthYear < 1 || birthYear > currentYear) {
+        document.getElementById('errorYear').innerHTML = "Must be a valid year";
+        return;
     }
 
     document.getElementById('resultYear').innerHTML = years;
@@ -28,8 +54,7 @@ function calculateAge() {
     document.getElementById('resultDay').innerHTML = days;
 }
 
-
-function getDaysInMonth(year, month, days) {
+function getDaysInMonth(year, month) {
     if (month === 1) { 
         if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
             return 29; 
@@ -49,5 +74,5 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
-calculateAge()
-getDaysInMonth()
+calculateAge();
+getDaysInMonth();
