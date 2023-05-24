@@ -50,7 +50,7 @@ function calculateAge() {
   } else {
       document.getElementById('errorMonth').innerHTML = "";
       document.getElementById('month').classList.remove('error-outline');
-      document.getElementById('h5-month').classList.add('error-color');
+      document.getElementById('h5-month').classList.remove('error-color');
   }
   
   if (birthYear < 1 || birthYear > currentYear) {
@@ -61,7 +61,7 @@ function calculateAge() {
   } else {
       document.getElementById('errorYear').innerHTML = "";
       document.getElementById('year').classList.remove('error-outline');
-      document.getElementById('h5-year').classList.add('error-color');
+      document.getElementById('h5-year').classList.remove('error-color');
   }
 
     document.getElementById('resultYear').innerHTML = years;
