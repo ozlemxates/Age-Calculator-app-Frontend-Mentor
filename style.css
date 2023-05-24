@@ -97,6 +97,15 @@ input::placeholder {
     color: var(--Smokey-grey);
 }
 
+.error-outline {
+    outline: 1px solid var(--invalidTxt);
+}
+
+.error-color {
+    color: var(--invalidTxt);
+}
+
+
 p {
     color: var(--invalidTxt);
     font-family:poppins-italic;
