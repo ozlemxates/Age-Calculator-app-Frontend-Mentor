@@ -64,10 +64,24 @@ function calculateAge() {
       document.getElementById('h5-year').classList.remove('error-color');
   }
 
-    document.getElementById('resultYear').innerHTML = years;
-    document.getElementById('resultMonth').innerHTML = months;
-    document.getElementById('resultDay').innerHTML = days;
+    if (years) {
+        document.getElementById('resultYear').innerHTML = years;
+    } else {
+        document.getElementById('resultYear').innerHTML = "--";
+    }
+    if (months) {
+        document.getElementById('resultMonth').innerHTML = months;
+    } else {
+        document.getElementById('resultMonth').innerHTML = "--";
+    }
+    if (days) {
+        document.getElementById('resultDay').innerHTML = days;
+    } else {
+        document.getElementById('resultDay').innerHTML = "--";
+    } 
 }
+
+
 
 function getDaysInMonth(year, month) {
     if (month === 1) { 
