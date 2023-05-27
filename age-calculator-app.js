@@ -1,3 +1,7 @@
+const imgElement = document.getElementById('img-icon');
+
+imgElement.addEventListener('click', calculateAge);
+
 function calculateAge() {
   let birthDay = parseInt(document.getElementById('day').value);
   let birthMonth = parseInt(document.getElementById('month').value);
