@@ -37,10 +37,11 @@ function calculateAge() {
     document.getElementById('h5-day').classList.add('error-color');
     return;
   } else {
-      document.getElementById('errorDay').innerHTML = "";
-      document.getElementById('day').classList.remove('error-outline');
-      document.getElementById('h5-day').classList.remove('error-color');
+    document.getElementById('errorDay').innerHTML = "";
+    document.getElementById('day').classList.remove('error-outline');
+    document.getElementById('h5-day').classList.remove('error-color');
   }
+  
   
   if (birthMonth < 1 || birthMonth > 12) {
       document.getElementById('errorMonth').innerHTML = "Must be a valid month";
@@ -64,21 +65,9 @@ function calculateAge() {
       document.getElementById('h5-year').classList.remove('error-color');
   }
 
-    if (years) {
-        document.getElementById('resultYear').innerHTML = years;
-    } else {
-        document.getElementById('resultYear').innerHTML = "--";
-    }
-    if (months) {
-        document.getElementById('resultMonth').innerHTML = months;
-    } else {
-        document.getElementById('resultMonth').innerHTML = "--";
-    }
-    if (days) {
-        document.getElementById('resultDay').innerHTML = days;
-    } else {
-        document.getElementById('resultDay').innerHTML = "--";
-    } 
+    document.getElementById('resultYear').innerHTML = years || "--";
+    document.getElementById('resultMonth').innerHTML = months || "--";
+    document.getElementById('resultDay').innerHTML = days || "--";
 }
 
 
@@ -121,3 +110,6 @@ document.addEventListener('keyup', function(event) {
 
 calculateAge();
 getDaysInMonth();
+
+// bu versiona geri dön
+
