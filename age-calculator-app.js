@@ -45,8 +45,6 @@ function calculateAge() {
     document.getElementById('day').classList.remove('error-outline');
     document.getElementById('h5-day').classList.remove('error-color');
   }
-  
-  
   if (birthMonth < 1 || birthMonth > 12) {
       document.getElementById('errorMonth').innerHTML = "Must be a valid month";
       document.getElementById('month').classList.add('error-outline');
@@ -94,17 +92,42 @@ document.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault(); 
         const currentElement = event.target;
-        if (currentElement.id === 'day') {
-            const monthInput = document.getElementById('month');
-            monthInput.focus(); 
+        if (currentElement.id === 'year') {
+            const dayInput = document.getElementById('day');
+            if (dayInput.value === '') {
+                dayInput.focus();
+            } else {
+                const monthInput = document.getElementById('month');
+                if (monthInput.value === '') {
+                    monthInput.focus();
+                } else {
+                    calculateAge();
+                }
+            }
         } else if (currentElement.id === 'month') {
             const yearInput = document.getElementById('year');
-            yearInput.focus(); 
-        } else if (currentElement.id === 'year') {
-            calculateAge(); 
+            if (yearInput.value === '') {
+                yearInput.focus();
+            } else {
+                const dayInput = document.getElementById('day');
+                if (dayInput.value === '') {
+                    dayInput.focus();
+                } else {
+                    calculateAge();
+                }
+            }
+        } else if (currentElement.id === 'day') {
+            const monthInput = document.getElementById('month');
+            if (monthInput.value === '') {
+                monthInput.focus();
+            } else {
+                calculateAge();
+            }
         }
     }
 });
+
+
 
 document.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
