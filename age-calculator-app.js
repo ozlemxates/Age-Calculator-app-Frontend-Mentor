@@ -72,8 +72,6 @@ function calculateAge() {
     document.getElementById('resultDay').innerHTML = days || "--";
 }
 
-
-
 function getDaysInMonth(year, month) {
     if (month === 1) { 
         if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
@@ -127,8 +125,6 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
-
-
 document.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         calculateAge();
@@ -139,4 +135,3 @@ calculateAge();
 getDaysInMonth();
 
 // bu versiona geri dön
-

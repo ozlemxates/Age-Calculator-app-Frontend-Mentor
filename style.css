@@ -150,6 +150,7 @@ img:hover {
 
 li {
     list-style: none;
+    cursor:default ;
 }
 
 span {
