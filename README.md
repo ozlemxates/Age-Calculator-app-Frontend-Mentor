@@ -9,7 +9,7 @@ Thanks for checking out my front-end coding solution for [Age calculator app cha
 
 ### Links
 
-- Solution URL: [Here](https://your-solution-url.com)
+- Solution URL: [Here](https://www.frontendmentor.io/solutions/agecalculator-app-frontend-mentor-TNzth--0Go)
 - Live Site URL: [Here](https://ozlemxates.github.io/Age-Calculator-app-Frontend-Mentor/)
 
 ### Continued development
