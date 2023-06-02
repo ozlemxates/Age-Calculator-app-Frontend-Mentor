@@ -131,6 +131,3 @@ function handleInput(firstInputId, secondInputId) {
 }
 
 calculateAge();
-
-// bu versiyona dön
-
