@@ -3,14 +3,14 @@ const imgElement = document.getElementById('img-icon');
 imgElement.addEventListener('click', calculateAge);
 
 function calculateAge() {
-  let birthDay = parseInt(document.getElementById('day').value);
-  let birthMonth = parseInt(document.getElementById('month').value);
-  let birthYear = parseInt(document.getElementById('year').value);
+  const birthDay = parseInt(document.getElementById('day').value);
+  const birthMonth = parseInt(document.getElementById('month').value);
+  const birthYear = parseInt(document.getElementById('year').value);
 
-  let currentDate = new Date();
-  let currentYear = currentDate.getFullYear();
-  let currentMonth = currentDate.getMonth() + 1;
-  let currentDay = currentDate.getDate();
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth() + 1;
+  const currentDay = currentDate.getDate();
 
   let years = currentYear - birthYear;
   let months = currentMonth - birthMonth;
@@ -83,64 +83,52 @@ if (
         document.getElementById('errorYear').innerHTML = '';
         document.getElementById('year').classList.remove('error-outline');
         document.getElementById('h5-year').classList.remove('error-color');
-        }
     }
-  
+  }
 }
 
 function getDaysInMonth(year, month) {
-    if (month === 1) {
-      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-        return 29;
-      } else {
-        return 28;
-      }
-    } else if (month === 7) {
-      return 31;
-    } else if (month % 2 === 0 && month !== 8) {
-      return 30;
+  if (month === 1) {
+    if ((year % 4 === 0 || year % 100 !== 0) || year % 400 === 0) {
+      return 29;
     } else {
-      return 31;
+      return 28;
     }
+  } else if (month === 7) {
+  return 31;
+  } else if (month % 2 === 0 && month !== 8) {
+    return 30;
+  } else {
+    return 31;
+  }
 }
 
 document.addEventListener('keyup', function (event) {
   if (event.key === 'Enter') {
     const currentElement = event.target;
     if (currentElement.id === 'year') {
-      const dayInput = document.getElementById('day');
-      if (dayInput.value === '') {
-        dayInput.focus();
-      } else {
-        const monthInput = document.getElementById('month');
-        if (monthInput.value === '') {
-          monthInput.focus();
-        } else {
-          calculateAge();
-        }
-      }
+      handleInput('day', 'month');
     } else if (currentElement.id === 'month') {
-      const yearInput = document.getElementById('year');
-      if (yearInput.value === '') {
-        yearInput.focus();
-      } else {
-        const dayInput = document.getElementById('day');
-        if (dayInput.value === '') {
-          dayInput.focus();
-        } else {
-          calculateAge();
-        }
-      }
+      handleInput('year', 'day');
     } else if (currentElement.id === 'day') {
-      const monthInput = document.getElementById('month');
-      if (monthInput.value === '') {
-        monthInput.focus();
-      } else {
-        calculateAge();
-      }
+      handleInput('month');
     }
   }
 });
+
+function handleInput(firstInputId, secondInputId) {
+  const firstInput = document.getElementById(firstInputId);
+  if (firstInput.value === '') {
+    firstInput.focus();
+  } else {
+    const secondInput = document.getElementById(secondInputId);
+    if (secondInput && secondInput.value === '') {
+      secondInput.focus();
+    } else {
+      calculateAge();
+    }
+  }
+}
 
 calculateAge();
 
