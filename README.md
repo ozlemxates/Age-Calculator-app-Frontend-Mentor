@@ -1,4 +1,8 @@
-# Hello! 👋
+# Hello! 
+
+## I am currently working on this app to make it more maintainable and to fix errors.
+
+<!-- # Hello! 👋
 
 Thanks for checking out my front-end coding solution for [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Here is the [design preview for the Age calculator app coding challenge.](./design/desktop-preview.jpg) 
 
@@ -33,4 +37,4 @@ I made every effort to construct my code using the most optimal and effective so
 
 I received assistance during the coding process from an AI-powered assistant called ChatGPT and consulted previously asked questions on the internet, particularly on platforms like Stack Overflow, while leveraging my own knowledge and putting in personal effort.
 
-## Thanks For Checking out🚀
+## Thanks For Checking out🚀 -->
