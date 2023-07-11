@@ -1,8 +1,4 @@
-# Hello! 
-
-## I am currently working on this app to make it more maintainable and to fix errors.
-
-<!-- # Hello! 👋
+# Hello! 👋
 
 Thanks for checking out my front-end coding solution for [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Here is the [design preview for the Age calculator app coding challenge.](./design/desktop-preview.jpg) 
 
@@ -18,7 +14,7 @@ Thanks for checking out my front-end coding solution for [Age calculator app cha
 
 ### Continued development
 
-I made every effort to construct my code using the most optimal and effective solutions during the development phase of this project. However, in certain situations, I had to resort to unconventional approaches that may not be entirely logical but still manage to produce the desired results. I intend to address these issues in the future and rectify them accordingly (hopefully). For example, using empty ``` <p></p> ``` tag might not be the best solution but I will fix it with a better solution later.
+I made every effort to construct my code using the most optimal and effective solutions during the development phase of this project. However, in certain situations, I had to resort to unconventional approaches that may not be entirely logical but still manage to produce the desired results, partially. I intend to address these issues in the future and rectify them accordingly (hopefully). For example, using empty ``` <p></p> ``` tag might not be the best solution but I will fix it with a better solution later.
 
 ```html
 <div class="box">
@@ -37,4 +33,4 @@ I made every effort to construct my code using the most optimal and effective so
 
 I received assistance during the coding process from an AI-powered assistant called ChatGPT and consulted previously asked questions on the internet, particularly on platforms like Stack Overflow, while leveraging my own knowledge and putting in personal effort.
 
-## Thanks For Checking out🚀 -->
+## Thanks For Checking out🚀
