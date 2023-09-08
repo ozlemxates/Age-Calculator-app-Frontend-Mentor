@@ -4,8 +4,9 @@ Thanks for checking out my front-end coding solution for [Age calculator app cha
 
 ### Screenshot
 
-![](age-calculator-app-main-desktop.jpg)
-![](age-calculator-app-main-mobile.jpg)
+![](ss-desktop-dull.jpg)
+![](ss-desktop.jpg)
+![](ss-mobile.jpg)
 
 ### Links
 
